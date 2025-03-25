@@ -1,1 +1,1 @@
-<a href="tel:+7812318454" class="contacts-info__text phone_ico">+7 (812) 31-84-54</a>
+<a href="tel:+78123366099" class="contacts-info__text phone_ico">+7 (812) 336-60-99</a>

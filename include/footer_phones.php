@@ -3,7 +3,7 @@
 		 Номер телефона
 	</div>
 	<div class="footer__address-item">
- <a class="ui-link" href="tel:88005502530">8 (800) 550-25-30</a>
+ 		<a class="ui-link" href="tel:88003334557">8 (800) 333-45-57</a>
 	</div>
 	<div class="footer__address-item">
 		 Email
