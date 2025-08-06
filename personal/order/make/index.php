@@ -1,10 +1,15 @@
-<?
+<?php
 define("HIDE_SIDEBAR", true);
+
+use \Bitrix\Main\Application;
+
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 
 Spro\Option::changeOptions('main', 'new_user_registration', 'Y');
 $APPLICATION->SetTitle("Заказы");
 // <script src="https://api-maps.yandex.ru/2.1/?apikey=d0d72f8a-07f1-4957-a7c0-1b3c534ca715&lang=ru_RU" type="text/javascript"></script>
+
+Application::getInstance()->getSession()->set('FIRST_START', true);
 ?>
 <script src="https://api-maps.yandex.ru/2.1/?apikey=d0d72f8a-07f1-4957-a7c0-1b3c534ca715&lang=ru_RU" type="text/javascript"></script>
 
