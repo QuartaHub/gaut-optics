@@ -266,42 +266,18 @@ $assets->addCss(SITE_TEMPLATE_PATH . '/css/main.css');
 			</div>
 		</div>
 	</div>
+	<?php
+		$APPLICATION->IncludeComponent(
+			'gaut:kreo',
+			'.default',
+			[
+				'CACHE_TIME' => '3600',
+				'CACHE_TYPE' => 'A'
+			]
+		);
+	?>
  </section> <section class="section section-about">
-	<div class="container">
-		<div class="section-about__block">
-			<div class="section-about__background">
- <span> <img alt="Пневматика Сталкер" src="/local/templates/gaut-optics/img/aboutbg.jpg" class="lazy entered loaded" data-src="/local/templates/stalker/img/aboutbg.webp" title="Пневматика Сталкер" data-ll-status="loaded"> </span>
-			</div>
-			<div class="section-about__content">
-				<h2 class="section__title"> О компании </h2>
-				<div class="section__text">
-					<p>
-						 Бренд GAUT был создан при участии компании QUARTA. За прошедшее время, благодаря качеству товаров и низким ценам, он завоевал уважение и признание российских охотников, стрелков и туристов.
-					</p>
-				</div>
-				<ul class="section-about__list">
-					<li class="section-about__list-item"> <a href="/about/" class="section-about__list-link">Подробнее о компании </a> </li>
-					<li class="section-about__list-item"> <a href="/about/guaranty/" class="section-about__list-link">Гарантия и возврат </a> </li>
-					<li class="section-about__list-item"> <a href="/about/delivery/" class="section-about__list-link">Доставка и оплата </a> </li>
-				</ul>
-				<div class="section-about__social">
-					<div class="about__social">
-						<div class="about__social-title">
-							 Мы в соцсетях
-						</div>
-						<div class="soc">
-							<div class="item">
- <a href="https://vk.com/#" target="_blank" class="vk"></a>
-							</div>
-							<div class="item">
- <a href="https://t.me/#" target="_blank" class="tg"></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+
  </section>
 	<?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",

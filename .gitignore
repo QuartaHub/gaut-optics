@@ -1,0 +1,16 @@
+/.idea/
+.htpasswd
+.htsecure_
+.well-known
+restore.php
+.htpassword
+/bitrix
+/upload
+/vendor
+/local
+/api/vendor/
+/robots.txt
+/.htaccess
+/.htsecure
+/work
+/.osp
