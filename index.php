@@ -6,68 +6,21 @@ $APPLICATION->SetTitle("Магазин качественной оптики и 
 
 $assets = \Bitrix\Main\Page\Asset::getInstance();
 $assets->addCss(SITE_TEMPLATE_PATH . '/css/main.css');
-
-
-
-
-
-
-?><div class="main">
+?>
+<div class="main">
  <section class="hero">
-	<div class="container">
-		<div class="swiper hero__slider">
-			<div class="swiper-wrapper" style="height: auto !important;">
-				<div class="swiper-slide hero__slide">
-					<div class="hero__slide-background">
- <img src="null" class="lazy" data-src="/local/templates/gaut-optics/img/bnr_01.webp" alt="">
-					</div>
-					<div class="hero__slide-content">
-						<div class="hero__slide-title">
-						</div>
-						<div class="hero__slide-subtitle">
-						</div>
-						<div class="hero__slide-characteristic">
-						</div>
- <a href="#" class="hero__slide-more"> Подробнее </a>
-					</div>
- <a href="/catalog/pnevmaticheskie_pistolety_stalker/pnevmaticheskie_pistolety_stalker_ultimatum_4_5mm_co2/" class="hero__slide-link"> <span class="ui-underline ui-underline--full"> Подробнее </span> </a>
-				</div>
-				<div class="swiper-slide hero__slide">
-					<div class="hero__slide-background">
- <img src="null" class="lazy" data-src="/upload/iblock/512/q2c9fyuq9tmaaiddbdtnf9w2oc4xiwr9/airsoft.webp" alt="">
-					</div>
-					<div class="hero__slide-content">
-						<div class="hero__slide-title">
-						</div>
-						<div class="hero__slide-subtitle">
-						</div>
-						<div class="hero__slide-characteristic">
-						</div>
- <a href="/catalog/pnevmaticheskie_pistolety_stalker/pnevmaticheskie_pistolety_stalker_prime_4_5mm_co2/" class="ui-button ui-button--red" style="min-width: 217px"> Смотреть </a>
-					</div>
- <a href="/catalog/pnevmaticheskie_pistolety_stalker/pnevmaticheskie_pistolety_stalker_prime_4_5mm_co2/" class="hero__slide-link"> <span class="ui-underline ui-underline--full"> Смотреть </span> </a>
-				</div>
-				<div class="swiper-slide hero__slide">
-					<div class="hero__slide-background">
- <img src="null" class="lazy" data-src="/upload/iblock/426/g8shczpj9o87x5y4a4ilg8tkh3n4szek/prime.webp" alt="">
-					</div>
-					<div class="hero__slide-content">
-						<div class="hero__slide-title">
-						</div>
-						<div class="hero__slide-subtitle">
-						</div>
-						<div class="hero__slide-characteristic">
-						</div>
- <a href="/catalog/pnevmaticheskie_pistolety_stalker/pnevmaticheskie_pistolety_stalker_airsoft_6mm_co2/" class="ui-button ui-button--red" style="min-width: 217px"> Смотреть </a>
-					</div>
- <a href="/catalog/pnevmaticheskie_pistolety_stalker/pnevmaticheskie_pistolety_stalker_airsoft_6mm_co2/" class="hero__slide-link"> <span class="ui-underline ui-underline--full"> Подробнее </span> </a>
-				</div>
-			</div>
-			<div class="swiper-pagination">
-			</div>
-		</div>
-	</div>
- </section> <section class="section section-slider">
+	<?php
+		$APPLICATION->IncludeComponent(
+			'gaut:main.slider',
+			'.default',
+			[
+				'CACHE_TIME' => '3600',
+				'CACHE_TYPE' => 'A'
+			]
+		);
+	?>	
+ </section>
+ <section class="section section-slider">
 	<div class="container">
 		<div class="section__wrapper">
 			<div class="section__content">
@@ -266,7 +219,9 @@ $assets->addCss(SITE_TEMPLATE_PATH . '/css/main.css');
 			</div>
 		</div>
 	</div>
-	<?php
+ </section>
+ <section class="section section-about">
+    <?php
 		$APPLICATION->IncludeComponent(
 			'gaut:kreo',
 			'.default',
@@ -276,8 +231,6 @@ $assets->addCss(SITE_TEMPLATE_PATH . '/css/main.css');
 			]
 		);
 	?>
- </section> <section class="section section-about">
-
  </section>
 	<?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
