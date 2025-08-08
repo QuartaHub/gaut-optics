@@ -76,7 +76,7 @@ if(isset($_REQUEST['ids'])){
 			1 => "DETAIL_PICTURE",
 		),
 		"HIDE_NOT_AVAILABLE" => "N",
-		"IBLOCK_ID" => "45",
+		"IBLOCK_ID" => CATALOG_IBLOCK_ID,
 		"IBLOCK_TYPE" => "1c_catalog",
 		"NAME" => "CATALOG_COMPARE_LIST",
 		"OFFERS_FIELD_CODE" => array(
